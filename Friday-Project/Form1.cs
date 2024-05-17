@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Friday_Project
 {
+    // Initial commit
     public partial class Form1 : Form
     {
         // Define x and y variables
