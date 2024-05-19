@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Friday_Project
 {
-    public partial class Form2 : Form
+    public partial class About : Form
     {
-        public Form2()
+        public About()
         {
             InitializeComponent();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
