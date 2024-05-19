@@ -43,6 +43,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.enrollmentIdTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -50,6 +52,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.enrollmentIdTextBox);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.enrollDatePicker);
             this.groupBox1.Controls.Add(this.showRecords);
@@ -200,6 +204,24 @@
             this.panel1.Size = new System.Drawing.Size(880, 69);
             this.panel1.TabIndex = 7;
             // 
+            // enrollmentIdTextBox
+            // 
+            this.enrollmentIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enrollmentIdTextBox.Location = new System.Drawing.Point(252, 42);
+            this.enrollmentIdTextBox.Name = "enrollmentIdTextBox";
+            this.enrollmentIdTextBox.Size = new System.Drawing.Size(228, 38);
+            this.enrollmentIdTextBox.TabIndex = 20;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semilight", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(42, 42);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(179, 38);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Enrollment ID";
+            // 
             // Enrollment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -235,5 +257,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.TextBox enrollmentIdTextBox;
+        private System.Windows.Forms.Label label5;
     }
 }

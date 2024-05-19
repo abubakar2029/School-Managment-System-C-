@@ -43,6 +43,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.sectionIdTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -52,7 +54,7 @@
             // 
             this.dobPicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dobPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dobPicker.Location = new System.Drawing.Point(252, 193);
+            this.dobPicker.Location = new System.Drawing.Point(252, 216);
             this.dobPicker.Name = "dobPicker";
             this.dobPicker.Size = new System.Drawing.Size(228, 22);
             this.dobPicker.TabIndex = 17;
@@ -125,7 +127,7 @@
             // sectionTextBox
             // 
             this.sectionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sectionTextBox.Location = new System.Drawing.Point(252, 130);
+            this.sectionTextBox.Location = new System.Drawing.Point(252, 161);
             this.sectionTextBox.Name = "sectionTextBox";
             this.sectionTextBox.Size = new System.Drawing.Size(228, 38);
             this.sectionTextBox.TabIndex = 5;
@@ -134,7 +136,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semilight", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(42, 130);
+            this.label4.Location = new System.Drawing.Point(42, 161);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 38);
             this.label4.TabIndex = 4;
@@ -144,7 +146,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(40, 177);
+            this.label3.Location = new System.Drawing.Point(40, 200);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(147, 38);
             this.label3.TabIndex = 2;
@@ -153,13 +155,15 @@
             // studentNameTextBox
             // 
             this.studentNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentNameTextBox.Location = new System.Drawing.Point(252, 86);
+            this.studentNameTextBox.Location = new System.Drawing.Point(252, 117);
             this.studentNameTextBox.Name = "studentNameTextBox";
             this.studentNameTextBox.Size = new System.Drawing.Size(228, 38);
             this.studentNameTextBox.TabIndex = 1;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.sectionIdTextBox);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.dobPicker);
             this.groupBox1.Controls.Add(this.showRecords);
@@ -193,11 +197,31 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(42, 86);
+            this.label2.Location = new System.Drawing.Point(42, 117);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(188, 38);
             this.label2.TabIndex = 0;
             this.label2.Text = "Student Name";
+            // 
+            // sectionIdTextBox
+            // 
+            this.sectionIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sectionIdTextBox.Location = new System.Drawing.Point(252, 73);
+            this.sectionIdTextBox.Name = "sectionIdTextBox";
+            this.sectionIdTextBox.Size = new System.Drawing.Size(228, 38);
+            this.sectionIdTextBox.TabIndex = 20;
+            this.sectionIdTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semilight", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(42, 73);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(138, 38);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Section ID";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // Section
             // 
@@ -233,5 +257,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox sectionIdTextBox;
+        private System.Windows.Forms.Label label5;
     }
 }

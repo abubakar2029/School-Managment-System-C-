@@ -18,15 +18,14 @@ namespace Friday_Project
         {
             InitializeComponent();
         }
-
-        private void showRecords_Click(object sender, EventArgs e)
+        private void display()
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
                 {
                     connection.Open();
-                    string query = "SELECT * FROM ;";
+                    string query = "SELECT * FROM ENROLLMENTS;";
                     SqlCommand cmd = new SqlCommand(query, connection);
 
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -39,6 +38,10 @@ namespace Friday_Project
                     MessageBox.Show($"An error occurred: {ex.Message}");
                 }
             }
+        }
+        private void showRecords_Click(object sender, EventArgs e)
+        {
+            display();
         }
 
         private void updateEnrollment_Click(object sender, EventArgs e)
@@ -56,7 +59,8 @@ namespace Friday_Project
                     cmd.Parameters.AddWithValue("@EnrollDate", enrollDatePicker.Value.Date);
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Enrollment Record Updated Successfully", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //   MessageBox.Show("Enrollment Record Updated Successfully", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    display();
                 }
                 catch (Exception ex)
                 {
@@ -72,12 +76,13 @@ namespace Friday_Project
                 try
                 {
                     connection.Open();
-                    string query = "DELETE FROM [Table] WHERE Id = @Id";
+                    string query = "DELETE FROM ENROLLMENTS WHERE Id = @Id";
                     SqlCommand cmd = new SqlCommand(query, connection);
                     cmd.Parameters.AddWithValue("@Id", enrollmentIdTextBox.Text);
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Enrollment Record Deleted Successfully", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    MessageBox.Show("Enrollment Record Deleted Successfully", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    display();
                 }
                 catch (Exception ex)
                 {
@@ -101,7 +106,8 @@ namespace Friday_Project
                     cmd.Parameters.AddWithValue("@EnrollDate", enrollDatePicker.Value.Date);
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Enrollment Record Added Successfully", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    MessageBox.Show("Enrollment Record Added Successfully", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    display();
                 }
                 catch (Exception ex)
                 {
