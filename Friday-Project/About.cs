@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Friday_Project
 {
+    // Commit from Dell 7980
     public partial class About : Form
     {
         public About()
