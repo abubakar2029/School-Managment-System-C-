@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.enrollmentIdTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.enrollDatePicker = new System.Windows.Forms.DateTimePicker();
             this.showRecords = new System.Windows.Forms.Button();
@@ -43,8 +45,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.enrollmentIdTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -71,7 +71,26 @@
             this.groupBox1.Size = new System.Drawing.Size(880, 606);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Student Information";
+            this.groupBox1.Text = "Enrollment Information";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // enrollmentIdTextBox
+            // 
+            this.enrollmentIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enrollmentIdTextBox.Location = new System.Drawing.Point(252, 42);
+            this.enrollmentIdTextBox.Name = "enrollmentIdTextBox";
+            this.enrollmentIdTextBox.Size = new System.Drawing.Size(228, 38);
+            this.enrollmentIdTextBox.TabIndex = 20;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semilight", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(42, 42);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(179, 38);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Enrollment ID";
             // 
             // dataGridView1
             // 
@@ -203,24 +222,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(880, 69);
             this.panel1.TabIndex = 7;
-            // 
-            // enrollmentIdTextBox
-            // 
-            this.enrollmentIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enrollmentIdTextBox.Location = new System.Drawing.Point(252, 42);
-            this.enrollmentIdTextBox.Name = "enrollmentIdTextBox";
-            this.enrollmentIdTextBox.Size = new System.Drawing.Size(228, 38);
-            this.enrollmentIdTextBox.TabIndex = 20;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semilight", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(42, 42);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(179, 38);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Enrollment ID";
             // 
             // Enrollment
             // 
