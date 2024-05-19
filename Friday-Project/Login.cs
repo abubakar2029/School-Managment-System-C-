@@ -60,11 +60,7 @@ namespace Friday_Project
                     SqlDataAdapter adapter = new SqlDataAdapter(command);
                     DataTable dataTable = new DataTable();
                     adapter.Fill(dataTable);
-                   /* foreach (DataRow row in dataTable.Rows)*/
-                        /*  {
-                              string fullName = row["FullName"].ToString();
-
-                          }*/
+                   
                         if (dataTable.Rows.Count > 0)
                         {
                             DataRow row1 = dataTable.Rows[0];
@@ -87,32 +83,6 @@ namespace Friday_Project
                         {
                             MessageBox.Show("Invalid username or password.");
                         }
-                    /*SqlDataReader reader = command.ExecuteReader();*/
-
-                   /* if (reader.HasRows)
-                    {
-                        reader.Read();
-                        string fullName = reader["FullName"].ToString();
-                        bool isApproved = comboBox1.Text == "Admin" || Convert.ToBoolean(reader["IsApproved"]);
-
-                        if (isApproved)
-                        {
-                            MessageBox.Show($"Welcome {fullName}!");
-                            Main mainForm = new Main();
-                            mainForm.Show();
-                            this.Hide();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Your account is not approved yet.");
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid username or password.");
-                    }*/
-
-                  /*  reader.Close();*/
                 }
                 catch (Exception ex)
                 {
