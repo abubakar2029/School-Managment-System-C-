@@ -12,7 +12,7 @@ namespace Friday_Project
             InitializeComponent();
             comboBox1.SelectedIndex = 0;
             comboBox1.Height = 50;
-            emailBox.Text = "admin.ali@example.com";
+            username.Text = "admin.ali@example.com";
             passwordBox.Text = "admin123";
         }
 
@@ -24,7 +24,7 @@ namespace Friday_Project
         private void loginButton_Click(object sender, EventArgs e)
         {
             string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=UafDB;Integrated Security=True;Encrypt=False;";
-            string email = emailBox.Text;
+            string email = username.Text;
             string password = passwordBox.Text;
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -97,6 +97,21 @@ namespace Friday_Project
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void showPass_CheckedChanged(object sender, EventArgs e)
+        {
+            passwordBox.PasswordChar = showPass.Checked ? '\0' : '*';
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }

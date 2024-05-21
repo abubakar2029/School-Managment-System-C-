@@ -7,7 +7,7 @@ namespace Friday_Project
 {
     public partial class Section : Form
     {
-        string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=UafDB;Integrated Security=True;Encrypt=False;";
+        string connectionString = "Data  Source=(localdb)\\MSSQLLocalDB;Initial Catalog=UafDB;Integrated Security=True;Encrypt=False;";
 
         public Section()
         {

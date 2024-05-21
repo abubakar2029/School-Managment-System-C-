@@ -41,8 +41,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.statusComboBox = new System.Windows.Forms.ComboBox();
             this.deleteRecord = new System.Windows.Forms.Button();
+            this.statusComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -104,9 +104,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(325, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 32);
+            this.label1.Size = new System.Drawing.Size(169, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Enrollment";
+            this.label1.Text = "Attendance";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // add_attendance
@@ -150,9 +150,10 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightCoral;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(87)))), ((int)(((byte)(122)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 69);
@@ -178,6 +179,18 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enrollment Information";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // deleteRecord
+            // 
+            this.deleteRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteRecord.Location = new System.Drawing.Point(326, 237);
+            this.deleteRecord.Name = "deleteRecord";
+            this.deleteRecord.Size = new System.Drawing.Size(154, 57);
+            this.deleteRecord.TabIndex = 22;
+            this.deleteRecord.Text = "Delete";
+            this.deleteRecord.UseVisualStyleBackColor = true;
+            this.deleteRecord.Click += new System.EventHandler(this.deleteRecord_Click);
             // 
             // statusComboBox
             // 
@@ -192,24 +205,15 @@
             this.statusComboBox.Text = "Present";
             this.statusComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // deleteRecord
-            // 
-            this.deleteRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteRecord.Location = new System.Drawing.Point(326, 237);
-            this.deleteRecord.Name = "deleteRecord";
-            this.deleteRecord.Size = new System.Drawing.Size(154, 57);
-            this.deleteRecord.TabIndex = 22;
-            this.deleteRecord.Text = "Delete";
-            this.deleteRecord.UseVisualStyleBackColor = true;
-            this.deleteRecord.Click += new System.EventHandler(this.deleteRecord_Click);
-            // 
             // Attendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 602);
+            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Attendance";
             this.Text = "Attendance";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

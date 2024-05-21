@@ -119,5 +119,10 @@ namespace Friday_Project
                 }
             }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
